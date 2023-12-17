@@ -7,19 +7,22 @@
         {
             "name": "device_preview_sample",
             "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "device_preview_sample (profile mode)",
-            "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "args": [
+                "--dart-define=devicePreview=${input:devicePreview}"
+            ],
         },
+    ],
+    "inputs": [
         {
-            "name": "device_preview_sample (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
+        "id": "devicePreview",
+        "type": "pickString",
+        "description": "Select the value for devicePreview",
+        "options": [
+            "on",
+            "off"
+        ],
+        "default": "off"
         }
     ]
 }
